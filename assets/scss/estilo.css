@@ -1,0 +1,50 @@
+body {
+  font-family: "Open Sans", serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  color: #fff;
+}
+.logo span {
+  font-size: 16px;
+  color: #32b0ee;
+}
+.logo p {
+  margin-bottom: 0;
+  color: #5b646e;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+body {
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+  margin-bottom: 0;
+  justify-content: end;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.containermain .bannermain h1 {
+  color: #fff;
+  font-size: 62px;
+  font-weight: bold;
+}
+.containermain .bannermain h1 span {
+  font-weight: 300;
+}/*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,60 @@
+@import "variables";
+
+body{
+    font-family: $fuente-pagina;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+
+    h1{
+        font-family: $fuente-logo;
+        font-size: $font-logo;
+        color: $color-texto-blanco;
+    }
+
+    span{
+        font-size: $font-h6;
+        color: $color-secundario;
+    }
+    p{
+        margin-bottom: 0;
+        color: $color-gris;
+        font-weight: $font-light;
+        font-size: $font-parrafo;
+    }
+}
+
+body{
+    background-color: black;
+}
+
+.nav{
+    display: flex;
+    gap: 38px;
+    align-items: center;
+    margin-bottom: 0;
+    justify-content: end;
+    a{
+        text-decoration: none;
+        font-size: $font-parrafo;
+        font-weight: $font-regular;
+        color: $color-texto-blanco;
+    }
+}
+
+.containermain{
+    .bannermain{
+    h1{
+        color: $color-texto-blanco;
+        font-size: $font-h1;
+        font-weight: bold;
+        span{
+            font-weight: $font-light;
+        }
+    }
+    }
+}
