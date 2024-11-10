@@ -1,35 +1,147 @@
-@import "variables";
+@import "../bootstrap-5.3.3/scss/bootstrap.scss";
+
+$fuente-logo: "Pacifico", cursive;
+$fuente-pagina: "Open Sans", serif;
+
+$color-primario: #0feb9e; 
+$color-secundario: #32b0ee;
+$color-destacado: #0eb493;
+$color-oscuro: #062033;
+$color-texto-blanco: #fff;
+$color-fondo-oscuro: #f4f7f9;
+$color-gris: #5b646e;
+
+// Tipografías
+$font-logo: 28px;
+$font-subtexto: 13px;
+$font-h1: 62px;
+$font-h2: 48px;
+$font-h3: 28px;
+$font-h4: 20px;
+$font-h5: 18px;
+$font-h6: 16px;
+$font-parrafo: 13px;
+$font-boton: 14px;
+$font-formulario-grande: 24px;
+$font-formulario-mediano: 22px;
+$font-light: 300 ;
+$font-regular: 400 ;
+$font-medium: 500 ;
+$font-semibold: 600 ;
+$font-bold: 700 ;
+$font-extrabold: 800 ;
+
+// variables de texto
+
+h1{
+    font-size: 62px;
+}
+h2{
+   font-size: 48px;
+} 
+h3{
+   font-size: 28px;
+} 
+h4{
+   font-size: 20px;
+} 
+h5{
+   font-size: 18px;
+} 
+h6{
+   font-size: 16px;
+} 
+p{
+    font-size: 13px;
+}
+
+button{
+    font-size: $font-boton;
+}
 
 body{
     font-family: $fuente-pagina;
+    background-color: $color-texto-blanco;
+}
+
+// mixins
+
+@mixin estilo-titulos{
+        margin-top: 75px;
+        margin-bottom: 35px;
+        font-weight: $font-extrabold;
+        color: $color-destacado;
+        &::after{
+            content: url(../img/decorfeatures.png);
+            display: block; 
+        }
+}
+
+@mixin estilo-boton{
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    background-color: $color-texto-blanco;
+}
+
+@mixin estilo-boton-activo{
+    background-color: $color-destacado;
+    color: white;
+    border-radius: 5px;
 }
 
 
+// diseño de circulos{
+    .circle {
+        height: 8px;
+        width: 8px;
+        border: 1px solid $color-texto-blanco;
+        border-radius: 50%;
+        display: inline-block;
+     }
+
+     .circleactivo {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: $color-texto-blanco;
+        display: inline-block;
+     }
+
+header{
+    background-image: url(../img/rectangleheader.png);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.imagenheaderbody{
+    background-image: url(../img/headerimg.png);
+    height: 800px;    
+}
 
 .logo{
     display: flex;
     align-items: center;
-
     h1{
         font-family: $fuente-logo;
         font-size: $font-logo;
         color: $color-texto-blanco;
+        margin-bottom: none !important;
     }
 
     span{
         font-size: $font-h6;
         color: $color-secundario;
+        font-weight: $font-light;
+        font-family: $fuente-pagina;
     }
     p{
-        margin-bottom: 0;
+        margin-top: 20px;
         color: $color-gris;
         font-weight: $font-light;
         font-size: $font-parrafo;
     }
-}
-
-body{
-    background-color: black;
 }
 
 .nav{
@@ -47,14 +159,168 @@ body{
 }
 
 .containermain{
-    .bannermain{
-    h1{
-        color: $color-texto-blanco;
-        font-size: $font-h1;
-        font-weight: bold;
-        span{
+    .textobanner{
+        margin-top: 400px;
+    }
+    .bannermain{ 
+        .linksmain{
+            margin-top: 100px;
+            a{
+                margin-right: 15px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+            } 
+
+        }
+        h1{
+            color: $color-texto-blanco;
+            font-weight: bold;
+            span{
+                font-weight: $font-light;
+            }
+        }
+        h2{
+            color: $color-texto-blanco;
             font-weight: $font-light;
+            span{
+                color: $color-primario;
+            }
+        }
+        h5{
+            margin-top: 15px;
+            color: $color-texto-blanco;
+            font-weight: $font-light;
+            &::before, &::after{
+                content: url(../img/mainheaderdecor.png);
+                position: relative;
+                margin: 30px;
+                bottom: 4px;
+            }
         }
     }
+}
+
+.colordefondofeatures{
+    background-color: $color-fondo-oscuro;
+}
+
+.seccionfeatures{
+    .circle{
+        border: 1px solid $color-oscuro;
+    }
+    
+    .circleactivo{
+        background-color: $color-oscuro;
+    }
+    .cajafeatures{
+        padding-left: 70px;
+    }
+    h3{
+        @include estilo-titulos()
+    }
+    h4{
+        font-weight: $font-semibold;
+        &.branding{
+            &::before{
+                position: relative;
+                float: inline-end;
+                right: 105%;
+                content: url(../img/branding.png);
+            }
+        }
+        &.development{
+            &::before{
+                position: relative;
+                float: inline-end;
+                right: 105%;
+                content: url(../img/development.png);
+            }
+        }
+        &.consulting{
+            &::before{
+                position: relative;
+                float: inline-end;
+                right: 105%;
+                content: url(../img/consulting.png);
+            }
+        }
+    }
+    .circulos{
+        display: flex;
+        margin-top: 80px;
+        gap: 15px;
+        margin-bottom: 55px;
     }
 }
+
+.seccionworks{
+    h5{
+        font-weight: $font-semibold;
+        width: 70%;
+        text-align: center;
+        color: $color-oscuro;
+        margin-bottom: 45px;
+    }
+    h3{
+        @include estilo-titulos()
+    }
+    button{
+        margin-bottom: 40px;
+        &:hover{
+            @include estilo-boton-activo()
+        }
+        @include estilo-boton()
+    }
+    .boton-activo{
+        @include estilo-boton-activo()
+    }
+    .espaciadobotones{
+        gap: 25px;
+    }
+}
+
+.grid-de-imagenes {
+    position: relative;
+    .col {
+      padding: 0;
+      position: relative;
+  
+      img {
+        width: 100%;
+        height: 300px;
+      }
+  
+      .contenidohover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: mix(transparent, $color-destacado, 30%); 
+        color: $color-texto-blanco;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+  
+        .iconodeojo {
+          width: 40px; 
+          height: 40px; 
+          margin-bottom: 10px;
+        }
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+  
+      &:hover .contenidohover {
+        opacity: 1;
+      }
+    }
+  }
+  
