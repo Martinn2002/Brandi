@@ -317,10 +317,284 @@ header{
           opacity: 1;
         }
       }
-  
-      &:hover .contenidohover {
-        opacity: 1;
-      }
+    }
+  }
+
+  .seccionteam{
+    h3{
+        @include estilo-titulos()
+    }
+   
+    h5{
+        font-weight: $font-semibold;
+        width: 70%;
+        text-align: center;
+        color: $color-oscuro;
+        margin-bottom: 45px;
     }
   }
   
+  .teamworker{
+    img{
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+    }
+
+    .col-3{
+        position: relative;
+        .contenidohover {
+            text-align: center;
+            h6{
+                width: 90%;
+                &:first-child{
+                    font-weight: $font-bold;
+                    margin-bottom: 15px;
+                }
+                &:last-child{
+                    font-weight: $font-regular;
+                }
+            }
+            position: absolute;
+            top: 0;
+            width: 92%;
+            height: 300px;
+            background-color: mix(transparent, $color-destacado, 30%); 
+            color: $color-texto-blanco;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            &:hover {
+              opacity: 1;
+            }
+          }
+      
+         
+    }
+    .redesosciales{
+        margin-top: 65px;
+        img{
+            height: 41px;
+            width: 41px;
+            padding: 10px;
+            object-fit: contain;
+            background-color: mix(transparent, $color-oscuro, 70%); 
+        }
+    
+    }
+    .textoteambajoimg{
+        margin-top: 20px;
+    }
+
+    .circle{
+        border: 1px solid $color-oscuro;
+    }
+    
+    .circleactivo{
+        background-color: $color-oscuro;
+    }
+
+    .circulos{
+        display: flex;
+        margin-top: 80px;
+        gap: 15px;
+        margin-bottom: 55px;
+    }
+}
+
+.background-funfacts{
+    background-image: url(../img/funfactsbackground.png);
+    height: 600px;
+    color: $color-texto-blanco;
+    h3{
+        @include estilo-titulos();
+        &::after{
+            content: url(../img/activedecorfeatures.png);
+        }
+    }
+    h1{
+        font-weight: $font-semibold;
+    }   
+    h5{
+        font-weight: $font-regular;
+    }
+    .icono-container {
+        border: 1px solid #ffffff50;
+        padding: 45px;
+        border-radius: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px; 
+        height: 130px; 
+        margin: 62px auto 30px;
+    }
+}
+  
+.secciondiscuss{
+    h3{
+        @include estilo-titulos()
+    }
+   
+    h5{
+        font-weight: $font-semibold;
+        width: 70%;
+        text-align: center;
+        color: $color-oscuro;
+        margin-bottom: 45px;
+    }
+}
+
+.secciondiscuss{
+    h2{
+        font-size: $font-formulario-mediano;
+        color: $color-oscuro !important;
+        margin-bottom: 40px !important;
+    }
+    h2,p,a{
+        font-weight: $font-regular;
+        text-decoration: none;
+        color: $color-gris;
+        margin-bottom: 15px;
+    }
+    h4{
+        font-size: $font-formulario-grande;
+        font-weight: $font-bold;
+        margin-bottom: 40px;
+    }
+    .form {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        font-size: 13px;
+        font-weight: 400;
+        input{
+            border: none;
+        }
+        .placeholder{
+            align-items: end;
+        }
+    }
+    
+    textarea {
+        resize: none;
+        border: none;
+        
+    }
+
+    .inputcortos{
+        gap: 30px;
+    } 
+
+    .botonformulario {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: transparent;
+        color: $color-oscuro;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        &:hover{
+            color: $color-destacado;
+        }
+        &::before{
+            position: relative;
+            content: url(../img/envelope.png);
+            top: 3px;
+            right: 5px;
+        }
+    }
+    .formularioredesosciales{
+        gap: 5px
+    }
+}
+
+.mapa{
+    margin-top: 100px;
+    bottom: 5%;
+}
+
+.lineadivisora{
+    height: 5px;
+    background-color: $color-oscuro;
+    bottom: 5px;
+}
+
+footer{
+    color: $color-texto-blanco;
+    height: 400px;
+    background-color: $color-destacado;
+    .row{
+        height: 400px;
+    }
+    .logo{
+        font-family: $fuente-logo;
+        font-weight: $font-regular;
+        margin-bottom: 45px;
+    }
+    h6{
+        font-size: $font-boton;
+        font-weight: $font-bold;
+        margin-bottom: 45px;
+    }
+
+    .h6lista{
+        margin-top: 30px;
+        h6{
+            margin-bottom: 0px;
+        }
+    }
+
+    form{
+        .formemail{
+            height: 42px;
+            border: 2px solid $color-texto-blanco;
+            background-color: $color-destacado;
+            border-radius: 3px;
+            width: 16.90%;
+            position: absolute;
+        }
+        button{
+            position: relative;
+            margin-top: 7px;
+            background-color: transparent;
+            border: none;
+            margin-left: 75%;
+            cursor: pointer;
+            margin-bottom: 25px;
+        }
+    }
+    .listafooter{
+        list-style: none;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        a,p{
+            color: $color-texto-blanco;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+        &:first-child{
+            padding-left: 0;
+        }
+    }
+    .textofinalfooter{
+        margin-top: 50px;
+        p{
+            margin-top: 20px;
+        }
+        a, .copyfg4{
+            color: $color-oscuro;
+        }
+        .copyfg4{
+            margin-top: 60px;
+        }
+    }
+}
