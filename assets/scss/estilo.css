@@ -12505,4 +12505,49 @@ footer .textofinalfooter a, footer .textofinalfooter .copyfg4 {
 }
 footer .textofinalfooter .copyfg4 {
   margin-top: 60px;
+}
+
+@media only screen and (max-width: 769px) {
+  .botonhome {
+    display: none;
+  }
+  .cajafeatures {
+    margin-bottom: 20px;
+  }
+  .grid-de-imagenes {
+    flex-direction: column;
+  }
+  .grid-de-imagenes img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .teamworker {
+    flex-direction: column;
+    width: 100%;
+  }
+  .teamworker img {
+    padding: 0xp;
+    left: 5px;
+  }
+  .columnaimg {
+    margin-bottom: 50px;
+  }
+  .background-funfacts {
+    height: 100%;
+  }
+  .funfacts {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .funfacts .cupcolumn {
+    margin-bottom: 20px;
+  }
+  .textoleftform {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .textoleftform p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=estilo.css.map */
