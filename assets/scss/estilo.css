@@ -12550,4 +12550,22 @@ footer .textofinalfooter .copyfg4 {
   .textoleftform p {
     font-size: 16px;
   }
+  .formularioredesosciales {
+    margin-top: 35px;
+    flex-direction: row !important;
+    justify-content: center;
+  }
+  .formularioredesosciales img {
+    margin-right: 10px;
+  }
+  footer {
+    height: 800px;
+  }
+  .logocolumn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .formemail {
+    width: 80% !important;
+  }
 }/*# sourceMappingURL=estilo.css.map */

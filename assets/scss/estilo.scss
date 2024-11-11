@@ -646,6 +646,28 @@ footer{
             font-size: calc($font-parrafo + 3px);
         }
     }
+    
+    .formularioredesosciales{
+        margin-top: 35px;
+        flex-direction: row !important;
+        justify-content: center;
+        img{
+            margin-right: 10px;
+        }
+    }
+
+    footer{
+        height: 800px ;
+    }
+
+    .logocolumn{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .formemail{
+        width: 80% !important;
+    }
 }
 
 @media only screen and (max-width: 540px) {
